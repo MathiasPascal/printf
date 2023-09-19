@@ -6,7 +6,7 @@
  *
  * Return: return n = number of integers.
  */
-int print_binary1(va_list our_list)
+int bc(va_list our_list)
 {
 	long int check = 1, i = 0;
 	long int k = va_arg(our_list, int), w = k;

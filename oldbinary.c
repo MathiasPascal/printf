@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_binary2- converts to int
+ * bc- converts to int
  * @arg: argument to take in
  *
  * Return: return n = number of integers.
  */
-int print_binary2(va_list our_list)
+int bc(va_list our_list)
 {
 	long int k = va_arg(our_list, int);
 	long int n;
