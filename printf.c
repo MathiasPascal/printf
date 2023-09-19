@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	va_list our_list;
 
 	print list[] = {
-		{"c", print_char}, {"s", print_str}, {"%", print_percent}, {"d", print_int}, {"u", print_unsigned}, {"i", print_int}, {"b", bc}, {"S", print_str}
+		{"c", print_char}, {"s", print_str}, {"%", print_percent}, {"d", print_int},{"i", print_int}
 	};
 	va_start(our_list, format);
 	if (!format)
@@ -26,12 +26,12 @@ int _printf(const char *format, ...)
 		{
 			if (!format[i + 1] || format[i + 1] == ' ')
 				return (-1);
-			for (j = 0; j < 6; j++)
+			for (j = 0; j < 5; j++)
 			{
 				if (format[i + 1] == *(list[j].count))
 					break;
 			}
-			if (j < 6)
+			if (j < 5)
 			{
 				length = length + list[j].func_ptr(our_list);
 				i++;

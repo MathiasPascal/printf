@@ -17,15 +17,13 @@ typedef struct character_print
 
 /* function prototypes */
 int _printf(const char *format, ...);
-int print_char(va_list our_list);
-int print_str(va_list our_list);
-int print_percent(va_list our_list __attribute((unused)));
 int _putchar(char c);
-int print_int(va_list our_list);
-int prit_digit(va_list our_list);
-int bc(va_list our_list);
-int print_unsigned(va_list our_list);
-int print_dig(long int k, long int n);
-int print_digit_u(long int k, long int n);
-int print_binary(long int k, long int n);
+char *print_string(va_list our_list);
+char *print_char(va_list our_list);
+char *print_d(va_list our_list);
+int _strlen(char *s);
+char *_strcpy(char *desti, char *srcc);
+char* (*get_func(char i))(va_list our_list);
+char *_itos(int div, int length, int n)
+
 #endif
