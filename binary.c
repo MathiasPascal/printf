@@ -6,7 +6,7 @@
  *
  * Return: return n = number of integers.
  */
-int bc(va_list our_list)
+int bnary1c(va_list our_list)
 {
 	long int check = 1, i = 0;
 	long int k = va_arg(our_list, int), w = k;
