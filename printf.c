@@ -10,7 +10,8 @@ int _printf(const char *format, ...)
 	va_list our_list;
 
 	print list[] = {
-		{"c", print_char}, {"s", print_str}, {"%", print_percent}, {"d", print_int},{"i", print_int}
+		{"c", print_char}, {"s", print_str}, {"%", print_percent},
+		{"d", print_int}, {"i", print_int}
 	};
 	va_start(our_list, format);
 	if (!format)
