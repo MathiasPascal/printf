@@ -4,28 +4,43 @@
 #include <stdarg.h>
 #include <string.h>
 #include <unistd.h>
+/**
+ * struct flags - print flags
+ * @add: +
+ * @space_bar: for space
+ * @hash_tag: #
+ */
+
+typedef struct flags
+{
+	int add;
+	int space_bar;
+	int hash_tag;
+} print;
 
 /**
  * struct character_print - print data
  * @c: character.
- * @func_ptr: function pointer
+ * @ptr: function pointer
+ *
  */
 
-typedef struct character_print
+typedef struct printing
 {
-	char *count;
-	int (*func_ptr)(va_list our_list);
-} print;
+	char c;
+	int (*ptr)(va_list our_list, print *ptr);
+} bizzy;
 
 /* function prototypes */
 int _printf(const char *format, ...);
 int _putchar(char c);
-char *print_string(va_list our_list);
-char *print_char(va_list our_list);
-char *print_d(va_list our_list);
-int _strlen(char *s);
-char *_strcpy(char *desti, char *srcc);
-char* (*get_func(char i))(va_list our_list);
-char *_itos(int div, int length, int n)
-
+int _puts(char *c);
+void print_number(int n);
+int count_digit(int i);
+int get_flags(char s, print *ptr);
+int (*function(char s))(va_list, print *);
+int print_int(va_list l, print *ptr);
+int print_string(va_list l, print *ptr);
+int print_char(va_list l, print *ptr);
+int print_percent(va_list l, print *ptr);
 #endif
