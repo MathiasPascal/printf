@@ -42,5 +42,7 @@ int (*function(char s))(va_list, print *);
 int print_int(va_list l, print *ptr);
 int print_string(va_list l, print *ptr);
 int print_char(va_list l, print *ptr);
+int print_address(va_list l, print *ptr);
+int print_unsigned(va_list l, print *ptr);
 int print_percent(va_list l, print *ptr);
 #endif

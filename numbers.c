@@ -64,3 +64,18 @@ int print_int(va_list l, print *ptr)
 	print_number(n);
 	return (resi);
 }
+/**
+ * print_unsigned - prints an unsigned integer
+ * @l: va_list of arguments from _printf
+ * @ptr: pointer to the struct flags
+ * Return: number of char printed
+ */
+
+int print_unsigned(va_list l, print *ptr)
+{
+	unsigned int u = va_arg(l, unsigned int);
+	char *str = convert(u, 10, 0);
+
+	(void)ptr;
+	return (_puts(str));
+}
