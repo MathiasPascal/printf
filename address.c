@@ -17,7 +17,7 @@ int print_address(va_list l, print *ptr)
 
 	if (!R)
 		return (_puts("(nil)"));
-	string = convert(p, 16, 1);
+	string = convert(R, 16, 1);
 	count += _puts("0x");
 	count += _puts(string);
 	return (count);

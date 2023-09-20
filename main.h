@@ -45,4 +45,18 @@ int print_char(va_list l, print *ptr);
 int print_address(va_list l, print *ptr);
 int print_unsigned(va_list l, print *ptr);
 int print_percent(va_list l, print *ptr);
+
+
+int print_unsigned(va_list l, print *ptr);
+int print_hex(va_list l, print *ptr);
+int print_hex_big(va_list l, print *ptr);
+int print_binary(va_list l, print *ptr);
+int print_octal(va_list l, print *ptr);
+
+
+char *convert(unsigned long int num, int base, int lowercase);
+int print_address(va_list l, print *ptr);
+int print_rot13(va_list l, print *ptr);
+int print_rev(va_list l, print *ptr);
+int print_bigS(va_list l, print *ptr);
 #endif
