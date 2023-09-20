@@ -4,11 +4,13 @@
 #include <stdarg.h>
 #include <string.h>
 #include <unistd.h>
+
 /**
  * struct character_print - print data
  * @c: character.
  * @func_ptr: function pointer
  */
+
 typedef struct character_print
 {
 	char *count;
